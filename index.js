@@ -23,17 +23,17 @@ var framework = function(files) {
   var isDuplicate = _isDuplicate.bind(this, files);
 
   /* Lolex */
-  var lolexPath = path.dirname(require.resolve('lolex/packages.json')) + '/lolex.js';
+  var lolexPath = path.dirname(require.resolve('lolex/package.json')) + '/lolex.js';
 
   /* Sinon */
-  var sinonPath = path.dirname(require.resolve('sinon/packages.json')) + '/pkg/sinon.js';
+  var sinonPath = path.dirname(require.resolve('sinon/package.json')) + '/pkg/sinon.js';
   if (!isDuplicate(sinonPath)) {
     files.unshift(pattern(lolexPath));
     files.unshift(pattern(sinonPath));
   }
 
   /* Chai */
-  var chaiPath = path.dirname(require.resolve('chai/packages.json')) + '/chai.js';
+  var chaiPath = path.dirname(require.resolve('chai/package.json')) + '/chai.js';
   if (!isDuplicate(chaiPath)) {
     files.unshift(pattern(chaiPath));
     files.push(pattern(path.join(__dirname, 'chai-adapter.js')));
