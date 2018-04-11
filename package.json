@@ -25,9 +25,9 @@
     "Tobias Kopelke <nox@raynode.de>"
   ],
   "peerDependencies": {
-    "chai": "^3.5.0 || ^4.0.2",
-    "sinon": "^2.1.0 || ^3.0.0 || ^4.0.0",
-    "sinon-chai": "^2.9.0"
+    "chai": ">=3.5.0 <5",
+    "sinon": ">=2.1.0 <5",
+    "sinon-chai": ">=2.9.0 <4"
   },
   "dependencies": {
     "lolex": "^1.6.0"
