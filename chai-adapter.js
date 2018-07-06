@@ -14,6 +14,6 @@
   }
 
   karma.loaded = function() {
-    karma.start();
+    karma.start(karma.config);
   };
 })(window, window.__karma__);
