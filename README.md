@@ -78,12 +78,15 @@ describe 'karma tests with sinon', ->
 
 Changelog
 ----------------
+### v2.0.0
+  * Removed `lolex` dependency. Please use [Sinon's fake timers](http://sinonjs.org/releases/v4.5.0/fake-timers/) instead, which use `lolex` under the hood.
+
 ### v1.1.0
   * Fixed broken Sinon dependency
   * Updated depenencies
       * Chai: `~3.0 => ~3.2.0`
       * Sinon: `~1.15.0 => ~1.16.0`
   * Removed `lodash` dependency
-        
+
 ### v1.0.0
   * Updated to broken sinon version. Probably doesnt work :bomb:.

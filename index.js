@@ -24,13 +24,9 @@ var _isDuplicate = function(files, file) {
 var framework = function(files) {
   var isDuplicate = _isDuplicate.bind(this, files);
 
-  /* Lolex */
-  var lolexPath = path.dirname(require.resolve('lolex/package.json')) + '/lolex.js';
-
   /* Sinon */
   var sinonPath = path.dirname(require.resolve('sinon/package.json')) + '/pkg/sinon.js';
   if (!isDuplicate(sinonPath)) {
-    files.unshift(pattern(lolexPath));
     files.unshift(pattern(sinonPath));
   }
 
